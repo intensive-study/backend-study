@@ -4,6 +4,7 @@
 - 장소 : Google Meet
 - 방식 : 알고리즘 1일 1문제(리뷰 2문제 포함), CS 면접
 - 문제집 링크 : [단기간 성장](https://www.acmicpc.net/workbook/view/4349)
+- 코테 사이트 : [SWEA](https://swexpertacademy.com/main/code/problem/problemList.do),  [BOJ](https://www.acmicpc.net),  [Programmers](https://programmers.co.kr/learn/challenges),  [HackerRank](https://www.hackerrank.com/dashboard),  [Codility](https://app.codility.com/programmers/),  [LeetCode](https://leetcode.com/problemset/all/)
 
 <br/>
 
@@ -14,7 +15,7 @@
 #### Problem Solving
 * [BOJ 12865. 평범한 배낭](https://www.acmicpc.net/problem/12865)
 * [BOJ 10830. 행렬 제곱](https://www.acmicpc.net/problem/10830)
-* 추가 2문제 풀이 (SWEA, BOJ, Programmers, Hackerank, Codility, LeetCode 등)
+* 추가 2문제 풀이
 
 <br/>
 
