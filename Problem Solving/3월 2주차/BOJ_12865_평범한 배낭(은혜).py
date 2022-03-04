@@ -11,3 +11,5 @@ for i in range(1, n+1):
         else :
             # 배낭에 들어갈 무게라면, 이전 행의 값과 새로 물건을 넣었을 때 값을 비교
             dp[i][j] = max(dp[i-1][j], dp[i-1][j-w] + v)
+
+print(dp[n][k])
