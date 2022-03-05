@@ -24,7 +24,7 @@ ex) `운영체제: jiyoung.md`
 - 개인 코드는 study_[0-9] 하위에 `jiyoung`과 같은 팀원들이 구분할 수 있는 패키지를 하나 더 생성해 관리합시다!
 - 코드가 담긴 파일 명은 BOJ[0-9]로 관리하도록 해요!  
 ex) `BOJ1111.java`, `BOJ1111.py`
-- 커밋: [solved/partial-solved/failed]: [BOJ[0-9]], [푼 방법(using lowercase)] 의 형식에 맞춰 커밋하도록 합니다!  
+- 커밋: [solved|partial-solved|failed]: BOJ[0-9], 푼 방법(using lowercase) 의 형식에 맞춰 커밋하도록 합니다!  
 ex) `solved: BOJ1111, dynamic`  
 *⁉️fail의 경우, 테스트 케이스도 통과하지 못한 코드를 푸시해야할 때 사용합니다!*
 
