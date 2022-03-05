@@ -1,3 +1,5 @@
+package study_01;
+
 import java.util.*;
 
 public class Main {
