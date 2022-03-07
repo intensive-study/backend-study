@@ -12,9 +12,10 @@ public class Main {
         //i - 1 의 경우에 index out of range 에러를 피하기위해 행을 n + 1의 크기로 선언
         //무게 w - weight를 인덱스로 쓰기 위해 k + 1의 크기로 열을 선언
         int[][] dp = new int[n + 1][k + 1];
+        int weight, value;
         for (int i = 1; i <= n; i++) {
-            int weight = sc.nextInt();
-            int value = sc.nextInt();
+            weight = sc.nextInt();
+            value = sc.nextInt();
 
             //현재 입력된 물건까지 무게가 1일 때 부터 제한 무게 k 까지 가능한 가장 높은 가치를 가지도록 업데이트
             for (int w = 1; w <= k; w++) {
