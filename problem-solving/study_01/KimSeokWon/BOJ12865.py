@@ -1,3 +1,4 @@
+# 물건 개수, 최대 무게
 n, k = map(int, input().split())
 
 arr = [[]]
@@ -13,4 +14,6 @@ for i in range(1, n + 1):
         else:
             dp[i][j] = dp[i - 1][j]
 
+for i in dp:
+    print(i)
 print(max(dp[-1]))

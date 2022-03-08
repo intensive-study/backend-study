@@ -26,7 +26,9 @@ def dfs(idx):
         return origin
 
     if idx % 2 == 1:
-        new_board = dfs((idx - 1) // 2)
+        # 3 / 2 = 1.5
+        # 3 // 2 = 1
+        new_board = dfs(idx // 2)
         new_board = multiply(new_board, new_board)
         return multiply(new_board, origin)
 
