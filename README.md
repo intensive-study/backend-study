@@ -1,7 +1,7 @@
 # 백엔드 스터디(2022.03 ~ )
 
 - 시간 : 토, 일 10:00 ~
-- 장소 : Google Meet
+- 장소 : Discord
 - 방식 : CS 면접, 알고리즘 1일 1문제(리뷰 2문제 포함)
 
 - 문제집 링크 : [단기간 성장](https://www.acmicpc.net/workbook/view/4349)
