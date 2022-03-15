@@ -12,34 +12,33 @@
 
 ## 3월 3주차
 
-### 화요일(3.15)
+### 3.15(화)
 
 #### Problem Solving
 * [BOJ 6087. 레이저 통신](https://www.acmicpc.net/problem/6087)
 * [BOJ 11066. 파일 합치기](https://www.acmicpc.net/problem/11066)
 * 추가 2문제 풀이
+* 
+<br/>
+
+### 3.19(토)
+
+#### Coputer Science
+* 데이터베이스 파트 공부
 
 <br/>
 
-### 토요일(3.19)
-
-#### CS
-* 데이터베이스 파트
-
-<br/>
-
-### 일요일(3.20)
+### 3.20(일)
 
 #### Problem Solving
 * [BOJ 11657. 타임 머신](https://www.acmicpc.net/problem/11657)
 * 추가 1문제 
 
-
 <br/>
 
 ## 3월 2주차
 
-### 화요일(3.8)
+### 3.8(화)
 
 #### Problem Solving
 * [BOJ 12865. 평범한 배낭](https://www.acmicpc.net/problem/12865)
@@ -48,9 +47,9 @@
 
 <br/>
 
-### 금요일(3.11)
+### 3.11(금)
 
-#### CS
+#### Coputer Science
 * 운영체제 파트 질문 준비
 
 
