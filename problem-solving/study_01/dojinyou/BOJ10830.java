@@ -68,10 +68,9 @@ public class BOJ10830 {
         matrix[j][i] = Integer.parseInt(st.nextToken());
       }
     }
-
     char[] binaryString = Long.toBinaryString(B).toCharArray();
-    System.out.println(binaryString);
-
+    // System.out.println(binaryString);
+    
     SquareMatrix[] matrixArray = new SquareMatrix[binaryString.length+1];
     matrixArray[1] = new SquareMatrix(matrix);
     // System.out.println(1+"번쨰 매트릭스");
