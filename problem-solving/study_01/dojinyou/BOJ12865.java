@@ -36,6 +36,6 @@ public class BOJ12865 {
     System.out.print(dp[N][K]);
   }
   public static void main(String[] args) throws Exception{
-    new Main().solution();
+    new BOJ12865().solution();
   }
 }

@@ -90,6 +90,6 @@ public class BOJ10830 {
     result.print();
   }
   public static void main(String[] args) throws Exception{
-    new Main().solution();
+    new BOJ10830().solution();
   }
 }

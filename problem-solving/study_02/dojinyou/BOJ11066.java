@@ -10,25 +10,30 @@ public class BOJ11066 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(br.readLine());
     final int TOTAL_CASE = Integer.parseInt(st.nextToken());
+
     for (int i=0;i<TOTAL_CASE;i++) {
       st = new StringTokenizer(br.readLine());
       int totalFiles = Integer.parseInt(st.nextToken());
-      st = new StringTokenizer(br.readLine());
+
       int[] fileSizes = new int[totalFiles];
       int[][] dp = new int[totalFiles][totalFiles];
+      
+      st = new StringTokenizer(br.readLine());
       for (int j =0;j<totalFiles;j++) {
         fileSizes[j] = Integer.parseInt(st.nextToken());
       }
+
       getDP(dp, fileSizes);      
+
       System.out.println(dp[0][totalFiles-1]);
     }
   }
 
   public void getDP(int[][] dp, int[] fileSizes) {
-    for (int sumLength = 1; sumLength<fileSizes.length;sumLength++) {
-      for (int startIndex=0; startIndex+sumLength<fileSizes.length;startIndex++) {
+    for (int sumLength = 1; sumLength < fileSizes.length; sumLength++) {
+      for (int startIndex=0; startIndex + sumLength < fileSizes.length; startIndex++) {
         int sumFileSizes = 0;
-        for (int i = startIndex; i <= startIndex+sumLength; i++) {
+        for (int i = startIndex; i <= startIndex + sumLength; i++) {
           sumFileSizes += fileSizes[i];
         }
         for (int splitIndex = startIndex; splitIndex < startIndex+sumLength; splitIndex++) {

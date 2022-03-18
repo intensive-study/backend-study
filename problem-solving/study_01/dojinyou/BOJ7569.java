@@ -99,6 +99,6 @@ public class BOJ7569 {
     }
   }
   public static void main(String[] args) throws Exception{
-    new Main().solution();
+    new BOJ7569().solution();
   }
 }
