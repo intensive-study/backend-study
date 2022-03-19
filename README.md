@@ -10,23 +10,21 @@
 
 <br/>
 
-## 3월 3주차
+## 스터디 4주차
 
-### 3.15(화)
+### 3.26(토)
+
+#### Computer Science
+* 네트워크 
+
+### 3.27(일)
 
 #### Problem Solving
-* [BOJ 6087. 레이저 통신](https://www.acmicpc.net/problem/6087)
-* [BOJ 11066. 파일 합치기](https://www.acmicpc.net/problem/11066)
-* 추가 2문제 풀이
+* 미정
 
 <br/>
 
-### 3.19(토)
-
-#### Coputer Science
-* 데이터베이스 파트 공부
-
-<br/>
+## 스터디 3주차
 
 ### 3.20(일)
 
@@ -36,7 +34,24 @@
 
 <br/>
 
-## 3월 2주차
+## 스터디 2주차
+
+### 3.15(화)
+
+#### Problem Solving
+* [BOJ 6087. 레이저 통신](https://www.acmicpc.net/problem/6087)
+* [BOJ 11066. 파일 합치기](https://www.acmicpc.net/problem/11066)
+* 추가 2문제 풀이
+
+### 3.18(금)
+
+#### Computer Science
+* 데이터베이스 파트 공부
+
+
+<br/>
+
+## 스터디 1주차
 
 ### 3.8(화)
 
@@ -45,11 +60,9 @@
 * [BOJ 10830. 행렬 제곱](https://www.acmicpc.net/problem/10830)
 * 추가 2문제 풀이
 
-<br/>
-
 ### 3.11(금)
 
-#### Coputer Science
+#### Computer Science
 * 운영체제 파트 질문 준비
 
 
