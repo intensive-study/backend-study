@@ -13,10 +13,10 @@ class BOJ18427 {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(br.readLine());
 
-    // Final variable 
-    final int N = Integer.parseInt(st.nextToken());
-    final int M = Integer.parseInt(st.nextToken());
-    final int H = Integer.parseInt(st.nextToken());
+    // Final variable
+    final int N = Integer.parseInt(st.nextToken()); // num of bus
+    final int M = Integer.parseInt(st.nextToken()); // num of route
+    final int H = Integer.parseInt(st.nextToken()); // num of route
 
     int[][] studentsBlocks = new int[N][M];
     int[] counts = new int[H+1];
@@ -34,12 +34,9 @@ class BOJ18427 {
       ArrayList<int[]> dataList = new ArrayList<int[]>(H*N);
       for(int i =0;i<H+1;i++) {
         for (int block:studentBlocks) {
-          if (block == 0 ) break;
-          if (counts[i] !=0 && i+block <= H) {
-            int[] temp = new int[2];
-            temp[0] = i+block;
-            temp[1] = counts[i]
-            dataList.add(temp);
+          if(block == 0) break;
+          if(counts[i] !=0 && i+block <= H) {
+            dataList.add(new int[]{i+block, counts[i]});
           }
         }
       }
