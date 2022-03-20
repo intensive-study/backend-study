@@ -20,7 +20,9 @@
 ### 3.27(일)
 
 #### Problem Solving
-* 미정
+* [BOJ 2931. 가스관](https://www.acmicpc.net/problem/2931)
+* [BOJ 11404. 플로이드](https://www.acmicpc.net/problem/11404)
+* 추가 문제 풀이 
 
 <br/>
 
