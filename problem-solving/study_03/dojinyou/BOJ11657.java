@@ -11,7 +11,6 @@ import java.util.StringTokenizer;
  */
 
 class BOJ11657 {
-
   public static void solution() throws Exception{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(br.readLine());
@@ -20,9 +19,6 @@ class BOJ11657 {
     final int N = Integer.parseInt(st.nextToken()); // num of bus
     final int M = Integer.parseInt(st.nextToken()); // num of route
 
-    // bus route infomation : busRouteInfo[from][to] => time
-    // time == null : not exist route
-    // 1 <= bus Id <= N
     Integer[][] busRouteInfo = new Integer[N+1][N+1];
 
     // busRouteInfo initialize
