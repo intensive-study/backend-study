@@ -13,7 +13,7 @@ public class BOJ11657 {
     static int node;
     static int edge;
     static int[][] edges;
-    static long[][] minWight;
+    static long[] minWight;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -21,11 +21,9 @@ public class BOJ11657 {
         node = Integer.parseInt(st.nextToken());
         edge = Integer.parseInt(st.nextToken());
         edges = new int[edge][];
-        minWight = new long[node+1][node+1];
+        minWight = new long[node+1];
 
-        for (long[] weight : minWight) {
-            Arrays.fill(weight, NOT_ARRIVED);
-        }
+        Arrays.fill(minWight, NOT_ARRIVED);
 
         for (int e = 0; e < edge; e++) {
             st = new StringTokenizer(br.readLine());
@@ -45,19 +43,20 @@ public class BOJ11657 {
         if(hasNegativeCycle) System.out.println(-1);
         else {
             for (int i = START + 1; i < node + 1; i++) {
-                if(minWight[START][i] == NOT_ARRIVED) System.out.println(-1);
-                else System.out.println(minWight[START][i]);
+                if(minWight[i] == NOT_ARRIVED) System.out.println(-1);
+                else System.out.println(minWight[i]);
             }
         }
     }
 
     public static boolean bellmanFord() {
+        minWight[START] = 0;
         for (int i = 0; i < node; i++) {
             for (int[] targetEdge : edges) {
-                if(minWight[START][targetEdge[0]] == NOT_ARRIVED) continue;
+                if(minWight[targetEdge[0]] == NOT_ARRIVED) continue;
 
-                if (minWight[START][targetEdge[1]] > minWight[START][targetEdge[0]] + targetEdge[2]) {
-                    minWight[START][targetEdge[1]] = minWight[START][targetEdge[0]] + targetEdge[2];
+                if (minWight[targetEdge[1]] > minWight[targetEdge[0]] + targetEdge[2]) {
+                    minWight[targetEdge[1]] = minWight[targetEdge[0]] + targetEdge[2];
 
                     if (i == node-1) return true;
                 }
