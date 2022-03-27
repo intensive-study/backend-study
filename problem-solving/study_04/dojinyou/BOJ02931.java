@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class BOJ02931 {
+public class BOJ02931old {
   public static void main(String[] args) throws Exception {
-    new BOJ02931().solution();   
+    new BOJ02931old().solution();   
   }
 
   private void solution() throws Exception {
@@ -53,8 +53,8 @@ public class BOJ02931 {
           put('3', new boolean[] {true,false,false,true});
           put('4', new boolean[] {false,false,true,true});
           put('.', new boolean[] {false,false,false,false});
-          put('Z', new boolean[] {false,false,false,false});
-          put('M', new boolean[] {false,false,false,false});
+          put('Z', new boolean[] {true,true,true,true});
+          put('M', new boolean[] {true,true,true,true});
         }
       };
     }
@@ -84,6 +84,10 @@ public class BOJ02931 {
         }
         if(equal) {
           blockType = keys.get(i);
+          if (blockType == 'M' || blockType == 'Z') {
+            blockType = ' ';
+            continue;
+          }
           break;
         }
       }
@@ -91,7 +95,7 @@ public class BOJ02931 {
       return (blankBlockRow+1) + " " + (blankBlockColumn+1) + " " + Character.toString(blockType);
     }
 
-    private boolean isConnected(char block, Direction direction)  {
+    private boolean isConnectable(char block, Direction direction)  {
       boolean[] blockConnection = this.blockConnection.get(block);
       return blockConnection[direction.toInt()];
 
@@ -99,21 +103,22 @@ public class BOJ02931 {
     }
     public boolean[] getNearBlockInfo(int blankBlockRow, int blankBlockColumn) {
       boolean[] nearBlockInfo = new boolean[4];
-      if(blankBlockRow-1 > 0) {
+
+      if(blankBlockRow-1 >= 0) {
         char upperBlock = europe[blankBlockRow-1][blankBlockColumn];
-        nearBlockInfo[0] = isConnected(upperBlock,Direction.DOWN);
+        nearBlockInfo[Direction.UP.toInt()] = isConnectable(upperBlock,Direction.DOWN);
       }
       if(blankBlockRow+1 < this.numOfRow) {
         char underBlock = europe[blankBlockRow+1][blankBlockColumn];
-        nearBlockInfo[2] = isConnected(underBlock,Direction.UP);
+        nearBlockInfo[Direction.DOWN.toInt()] = isConnectable(underBlock,Direction.UP);
       }
       if(blankBlockColumn+1 < this.numOfColumn) {
         char rightBlock = europe[blankBlockRow][blankBlockColumn+1];
-        nearBlockInfo[1] = isConnected(rightBlock,Direction.LEFT);
+        nearBlockInfo[Direction.RIGHT.toInt()] = isConnectable(rightBlock,Direction.LEFT);
       }
-      if(blankBlockColumn-1 > 0) {
+      if(blankBlockColumn-1 >= 0) {
         char leftBlock = europe[blankBlockRow][blankBlockColumn-1];
-        nearBlockInfo[3] = isConnected(leftBlock,Direction.RIGHT);
+        nearBlockInfo[Direction.LEFT.toInt()] = isConnectable(leftBlock,Direction.RIGHT);
       }
       return nearBlockInfo;
     }
@@ -129,10 +134,11 @@ public class BOJ02931 {
     
     public boolean isBlank(int r, int c) {
       if(this.europe[r][c] != '.') return false;
+      int cnt = 0;
       for(boolean blockInfo:getNearBlockInfo(r,c)){
-        if(blockInfo) return true;
+        if(blockInfo) cnt++;
       }
-      return false;
+      return cnt >= 2;
     }
   }
   enum Direction {
@@ -148,3 +154,19 @@ public class BOJ02931 {
     }
   }
 }
+
+
+// 해당 알고리즘은 빈칸의 위치를 찾고 주변에 연결된 정보를 수집하여 적절한 블록을 선택한다.
+// 이 알고리즘이 이 문제를 풀지 못한 이유는 M과 Z의 가변성 때문이다.
+// 가령 예를 들어, 아래와 같은 예시가 있다고 가정하자.
+//
+// 3 4
+// ..1M
+// 1-+.
+// Z.23
+// 
+// 위 예시에서 적절한 블록은 2 4 4이다.
+// 하지만 해당 알고리즘으로 진행할 경우 2 4 위치의 연결 정보는 상하좌 3군데가 연결된 것으로 된다.
+// 그 이유는 M과 Z가 4방향 모두 연결가능하다고 초기화하기 때문이다.
+// 따라서 이를 해결하기 위해서는 M,Z의 연결정보를 동적으로 할당해주어야 한다.
+// 이러한 수정사항보다는 Block의 흐름을 추적하는 것이 더 정확한 구현이 될 것이라고 생각한다.
